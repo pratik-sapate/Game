@@ -9,7 +9,7 @@ screen.title("Ping Pong Game")
 screen.bgcolor('Black')
 screen.setup(screen_width, screen_height)
 
-# left paddle
+# left slide
 left_slide = turtle.Turtle()
 left_slide.speed(0)
 left_slide.shape('square')
@@ -18,7 +18,7 @@ left_slide.shapesize(stretch_wid=6, stretch_len=1)
 left_slide.penup()
 left_slide.goto(-1*screen_width//2+50, 0)
 
-# right paddle
+# right slide
 right_slide = turtle.Turtle()
 right_slide.speed(0)
 right_slide.shape('square')
@@ -74,12 +74,6 @@ def slide_right_Down():
         y -= 20
         right_slide.sety(y)
 
-
-screen.listen()
-screen.onkeypress(slide_left_Up, 'r')
-screen.onkeypress(slide_left_Down, 'c')
-screen.onkeypress(slide_right_Up, 'Up')
-screen.onkeypress(slide_right_Down, 'Down')
 
 hand_detection = HandDetection()
 video_cam = cv2.VideoCapture(0)
@@ -143,6 +137,5 @@ while True:
         score += 1
         ball.dx *= -1
         ball.dx = ball.dx + 1 if ball.dx > 0 else ball.dx - 1
-    print(ball.dx)
     writable.clear()
     writable.write("Score : " + str(score), font=("Courier", 24, "normal"))
