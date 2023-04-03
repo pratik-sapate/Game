@@ -46,35 +46,6 @@ writable.goto(-100, screen_height // 2 - 50)
 writable.write("Score : " + str(score), font=("Courier", 24, "normal"))
 
 
-def slide_left_Up():
-    y = left_slide.ycor()
-    screen.window_height()
-    if y < screen.window_height() / 2:
-        y += 20
-        left_slide.sety(y)
-
-
-def slide_left_Down():
-    y = left_slide.ycor()
-    if y > -screen.window_height() / 2:
-        y -= 20
-        left_slide.sety(y)
-
-
-def slide_right_Up():
-    y = right_slide.ycor()
-    if y < screen.window_height() / 2:
-        y += 20
-        right_slide.sety(y)
-
-
-def slide_right_Down():
-    y = right_slide.ycor()
-    if y > -screen.window_height() / 2:
-        y -= 20
-        right_slide.sety(y)
-
-
 hand_detection = HandDetection()
 video_cam = cv2.VideoCapture(0)
 
