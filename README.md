@@ -20,3 +20,5 @@ opencv-python
  2. for finger recognize we are using media pipe. please refer https://google.github.io/mediapipe/solutions/hands.html to understand media pipe in better way.
  3. using opencv start camera and capture, pass image to Hand detection. and play ping pong
  
+ Detail you can find in https://medium.com/@sapate.pratik/ping-pong-virtual-reality-f6e0ec82cff3
+ 
